@@ -7,7 +7,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-# �����۶�
+# feign默认已经集成了hystrix，需要手动开启 熔断处理
 feign:
   hystrix:
     enabled: true
