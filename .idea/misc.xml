@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/ribbon-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/feign-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pay/pom.xml" />
       </list>
     </option>
   </component>
