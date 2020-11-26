@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-client" />
+        <module name="mybatis-plus" />
         <module name="ribbon-consumer" />
-        <module name="zuul-service" />
+        <module name="feign-consumer" />
         <module name="eureka-service" />
         <module name="pay" />
-        <module name="feign-consumer" />
+        <module name="zuul-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
       <module name="feign-consumer" options="-parameters" />
+      <module name="mybatis-plus" options="-parameters" />
       <module name="pay" options="-parameters" />
       <module name="ribbon-consumer" options="-parameters" />
       <module name="zuul-service" options="-parameters" />
