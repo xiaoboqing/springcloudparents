@@ -9,12 +9,12 @@
         <module name="eureka-client" />
         <module name="mybatis-plus" />
         <module name="ribbon-consumer" />
-        <module name="zuul-service" />
+        <module name="feign-consumer" />
+        <module name="config-service" />
         <module name="eureka-service" />
         <module name="pay" />
         <module name="config-client" />
-        <module name="feign-consumer" />
-        <module name="config-service" />
+        <module name="zuul-service" />
       </profile>
     </annotationProcessing>
   </component>
