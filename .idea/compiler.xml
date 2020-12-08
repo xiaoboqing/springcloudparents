@@ -11,10 +11,12 @@
         <module name="ribbon-consumer" />
         <module name="feign-consumer" />
         <module name="config-service" />
+        <module name="emqx" />
         <module name="eureka-service" />
         <module name="pay" />
         <module name="config-client" />
         <module name="zuul-service" />
+        <module name="emqx-publish" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,6 +24,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-client" options="-parameters" />
       <module name="config-service" options="-parameters" />
+      <module name="emqx" options="-parameters" />
+      <module name="emqx-publish" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
       <module name="feign-consumer" options="-parameters" />
