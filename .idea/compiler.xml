@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-client" />
-        <module name="mybatis-plus" />
-        <module name="ribbon-consumer" />
-        <module name="feign-consumer" />
-        <module name="config-service" />
         <module name="emqx" />
-        <module name="eureka-service" />
-        <module name="pay" />
+        <module name="config-service" />
         <module name="config-client" />
+        <module name="ribbon" />
+        <module name="pay" />
         <module name="zuul-service" />
+        <module name="myspringcloudconfigclient" />
+        <module name="eureka-service" />
+        <module name="ribbon-consumer" />
         <module name="emqx-publish" />
+        <module name="eureka-client" />
+        <module name="emqxpublish" />
+        <module name="mybatis-plus" />
+        <module name="feign-consumer" />
+        <module name="myspringcloudconfig" />
       </profile>
     </annotationProcessing>
   </component>
@@ -26,11 +30,15 @@
       <module name="config-service" options="-parameters" />
       <module name="emqx" options="-parameters" />
       <module name="emqx-publish" options="-parameters" />
+      <module name="emqxpublish" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
       <module name="feign-consumer" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
+      <module name="myspringcloudconfig" options="-parameters" />
+      <module name="myspringcloudconfigclient" options="-parameters" />
       <module name="pay" options="-parameters" />
+      <module name="ribbon" options="-parameters" />
       <module name="ribbon-consumer" options="-parameters" />
       <module name="zuul-service" options="-parameters" />
     </option>

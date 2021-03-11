@@ -1,4 +1,4 @@
-package com.wang.emqx.mqtt;
+package com.wang.emqxpublish.emqxpublish.mqtt;
 
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
@@ -18,7 +18,6 @@ public class MqttPushCallback implements MqttCallback {
 
     @Override
     public void connectionLost(Throwable cause) {
-
         log.info("断开连接，建议重连" + this);
         //断开连接，建议重连
     }

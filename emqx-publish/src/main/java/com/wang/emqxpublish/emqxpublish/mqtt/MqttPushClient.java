@@ -1,11 +1,7 @@
-package com.wang.emqx.mqtt;
+package com.wang.emqxpublish.emqxpublish.mqtt;
 
 
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-import org.eclipse.paho.client.mqttv3.MqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.MqttTopic;
+import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +22,6 @@ public class MqttPushClient {
     public static int MQTT_KEEPALIVE = 10;
 
     private MqttClient client;
-    MqttConnectOptions option;
     private static volatile MqttPushClient mqttClient = null;
     public static MqttPushClient getInstance() {
             synchronized (MqttPushClient.class) {
@@ -45,26 +40,22 @@ public class MqttPushClient {
     private void connect() {
         try {
             client = new MqttClient(MQTT_HOST, MQTT_CLIENTID, new MemoryPersistence());
-            option = new MqttConnectOptions();
+            MqttConnectOptions option = new MqttConnectOptions();
             option.setCleanSession(true);
             option.setUserName(MQTT_USERNAME);
             option.setPassword(MQTT_PASSWORD.toCharArray());
             option.setConnectionTimeout(MQTT_TIMEOUT);
             option.setKeepAliveInterval(MQTT_KEEPALIVE);
-            option.setAutomaticReconnect(false);
+            option.setAutomaticReconnect(true);
             try {
                 client.setCallback(new MqttPushCallback());
                 client.connect(option);
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    public void close() throws Exception {
-        client.disconnect();
     }
     /**
      * 发布主题，用于通知<br>
